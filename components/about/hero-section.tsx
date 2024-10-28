@@ -9,7 +9,7 @@ export function HeroSection() {
             Your Trusted Cleaning Partner
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-100 max-w-2xl mx-auto">
-            Since 2010, we've been delivering exceptional cleaning services with a focus on quality, 
+            Since 2023, we've been delivering exceptional cleaning services with a focus on quality, 
             reliability, and customer satisfaction. Our team of professionals is dedicated to making 
             your space spotless and healthy.
           </p>
