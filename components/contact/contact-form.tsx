@@ -31,7 +31,7 @@ export function ContactForm() {
           from_email: data.email,
           phone: data.phone,
           message: data.message,
-          to_email: 'contact@bravo-cleaning.com',
+          to_email: 'contact@bravo-clean.com',
         },
         'YOUR_PUBLIC_KEY' // e.g., 'user_xxxxxxxxxxxxxxxxxx'
       );
