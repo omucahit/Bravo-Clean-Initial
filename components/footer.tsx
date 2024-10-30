@@ -21,7 +21,7 @@ const navigation = {
   contact: {
     address: "62 Reservoir Rd, Parsippany, NJ 07054",
     phone: "(908) 395-7158",
-    email: "contact@bravo-cleaning.com",
+    email: "contact@bravo-clean.com",
     hours: "Mon-Fri: 8am-6pm | Sat-Sun: 9am-4pm"
   }
 };
