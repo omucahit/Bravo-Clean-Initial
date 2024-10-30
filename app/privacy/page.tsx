@@ -62,7 +62,7 @@ export default function PrivacyPage() {
             <p className="text-gray-600">
               If you have any questions about our Privacy Policy, please contact us at:
               <br />
-              Email: contact@bravo-cleaning.com
+              Email: contact@bravo-clean.com
               <br />
               Phone: (908) 395-7158
             </p>
