@@ -16,7 +16,7 @@ export function ContactInfo() {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      content: "contact@bravo-cleaning.com",
+      content: "contact@bravo-clean.com",
     },
     {
       icon: <Clock className="h-6 w-6" />,
