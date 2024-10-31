@@ -17,6 +17,7 @@ interface ContactFormData {
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSent, setIsSent] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormData>();
 
   const onSubmit = async (data: ContactFormData) => {
@@ -39,6 +40,8 @@ export function ContactForm() {
       if (result.status === 200) {
         toast.success("Message sent successfully!");
         reset();
+        setIsSent(true); // Set isSent to true on success
+        setTimeout(() => setIsSent(false), 3000); // Reset isSent after 3 seconds
       } else {
         throw new Error('Failed to send message');
       }
@@ -114,7 +117,7 @@ export function ContactForm() {
         className="w-full"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Sending..." : "Send Message"}
+        {isSubmitting ? "Sending..." : isSent ? "Message Sent" : "Send Message"}
       </Button>
     </form>
   );
