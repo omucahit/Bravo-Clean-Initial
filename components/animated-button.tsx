@@ -10,7 +10,10 @@ interface AnimatedButtonProps {
 
 export function AnimatedButton({ className }: AnimatedButtonProps) {
   const [textIndex, setTextIndex] = useState(0);
-  const texts = ["Get a Free Quote!", "Book Now"];
+  const texts = [
+    { text: "Get a Free Quote!", color: "text-amber-400" },
+    { text: "Book Now!", color: "text-white" }
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,7 +31,7 @@ export function AnimatedButton({ className }: AnimatedButtonProps) {
     >
       <AnimatePresence mode="wait">
         <motion.span
-          key={texts[textIndex]}
+          key={texts[textIndex].text}
           initial={{ y: -20, opacity: 0 }}
           animate={{ 
             y: 0, 
@@ -40,9 +43,9 @@ export function AnimatedButton({ className }: AnimatedButtonProps) {
             }
           }}
           exit={{ y: 20, opacity: 0 }}
-          className="absolute inset-0 flex items-center justify-center w-full"
+          className={`absolute inset-0 flex items-center justify-center w-full ${texts[textIndex].color} font-semibold`}
         >
-          {texts[textIndex]}
+          {texts[textIndex].text}
         </motion.span>
       </AnimatePresence>
     </Button>
