@@ -73,4 +73,14 @@ export default function Navbar() {
             ))}
             <div className="mt-4">
               <Link href="/book">
-                <But
+                <Button className="w-full" size="lg">
+                  Book Now
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
