@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
+import { AnimatedButton } from "@/components/animated-button";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -52,9 +53,7 @@ export default function Navbar() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link href="/book">
-            <Button size="lg">
-              Book Now
-            </Button>
+            <AnimatedButton />
           </Link>
         </div>
       </nav>
@@ -72,10 +71,8 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="mt-4">
-              <Link href="/book">
-                <Button className="w-full" size="lg">
-                  Book Now
-                </Button>
+              <Link href="/book" onClick={() => setMobileMenuOpen(false)}>
+                <AnimatedButton className="w-full" />
               </Link>
             </div>
           </div>
