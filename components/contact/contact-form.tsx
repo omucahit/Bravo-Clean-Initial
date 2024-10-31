@@ -23,10 +23,9 @@ export function ContactForm() {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      // Replace these with your EmailJS details
       const result = await emailjs.send(
-        'service_k15xnk9', // e.g., 'service_xxxxxxx'
-        'template_p6ox874', // e.g., 'template_xxxxxxx'
+        'service_k15xnk9',
+        'template_p6ox874',
         {
           from_name: data.name,
           from_email: data.email,
@@ -34,13 +33,13 @@ export function ContactForm() {
           message: data.message,
           to_email: 'contact@bravo-clean.com',
         },
-        '-MWOfhENzMAZQEJuA' // e.g., 'user_xxxxxxxxxxxxxxxxxx'
+        '-MWOfhENzMAZQEJuA'
       );
 
       if (result.status === 200) {
         toast.success("Message sent successfully!");
         reset();
-        setIsSent(true); // Set isSent to true on success
+        setIsSent(true);
         setTimeout(() => setIsSent(false), 3000); // Reset isSent after 3 seconds
       } else {
         throw new Error('Failed to send message');
@@ -114,7 +113,7 @@ export function ContactForm() {
 
       <Button
         type="submit"
-        className="w-full"
+        className={`w-full ${isSent ? "bg-green-500 text-white" : ""}`}
         disabled={isSubmitting}
       >
         {isSubmitting ? "Sending..." : isSent ? "Message Sent" : "Send Message"}
