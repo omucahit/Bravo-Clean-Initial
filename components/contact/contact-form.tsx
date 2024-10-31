@@ -24,7 +24,7 @@ export function ContactForm() {
     try {
       // Replace these with your EmailJS details
       const result = await emailjs.send(
-        'service_5o25oq6', // e.g., 'service_xxxxxxx'
+        'service_k15xnk9', // e.g., 'service_xxxxxxx'
         'template_p6ox874', // e.g., 'template_xxxxxxx'
         {
           from_name: data.name,
