@@ -15,7 +15,11 @@ interface ContactFormData {
   message: string;
 }
 
-export function ContactForm() {
+interface ContactFormProps {
+  onSubmitSuccess?: () => void;
+}
+
+export function ContactForm({ onSubmitSuccess }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormData>();
@@ -44,6 +48,7 @@ export function ContactForm() {
         reset();
         setIsSent(true);
         setTimeout(() => setIsSent(false), 3000);
+        onSubmitSuccess?.();
       } else {
         throw new Error('Failed to send message');
       }
