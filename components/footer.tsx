@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Sparkles } from "lucide-react";
+import { Logo } from "@/components/ui/logo";
 
 const navigation = {
   services: [
@@ -35,9 +35,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Link href="/" className="flex items-center gap-2">
-              <Sparkles className="h-8 w-8 text-primary" />
-              <span className="text-xl font-semibold">Bravo Clean</span>
+            <Link href="/" className="block">
+              <Logo />
             </Link>
             <p className="text-sm leading-6 text-gray-600">
               Making your space sparkle with professional, eco-friendly cleaning services.
