@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { Logo } from "@/components/ui/logo";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -18,11 +19,10 @@ export default function Navbar() {
 
   return (
     <header className="bg-white shadow-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-            <Sparkles className="h-8 w-8 text-primary" />
-            <span className="text-xl font-semibold">Bravo Clean</span>
+          <Link href="/" className="-m-1.5 p-1.5">
+            <Logo />
           </Link>
         </div>
         <div className="flex lg:hidden">
